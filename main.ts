@@ -1,22 +1,5 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    myDart = darts.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . e e . . . . . . . . . 
-        . . . . . . . e . . . . . . . . 
-        . . . . . . f f f f . . . . . . 
-        . . . . . f f f f f f . . . . . 
-        . . . . f f 1 f f 1 f f . . . . 
-        . . . . f f f 1 1 f f f . . . . 
-        . . . . f f 1 f f 1 f f . . . . 
-        . . . . . f f f f f f . . . . . 
-        . . . . . . f f f f . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.Projectile, mySprite.x, mySprite.y)
+    myDart = darts.create(assets.image`Bomb`, SpriteKind.Projectile, mySprite.x, mySprite.y)
     myDart.throwDart()
     music.pewPew.play()
 })
@@ -65,10 +48,16 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
         game.over(true)
     }
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleInsignia, function (sprite, location) {
+    tiles.setTilemap(tilemap`level7`)
+    mySprite2.destroy()
+    mySprite3 = sprites.create(assets.image`Dark mater`, SpriteKind.Enemy)
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
     pause(1000)
 })
+let mySprite3: Sprite = null
 let myDart: Dart = null
 let mySprite2: Sprite = null
 let mySprite: Sprite = null

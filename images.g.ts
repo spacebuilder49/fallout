@@ -38,24 +38,6 @@ cb5555bcdbbbbbdddbbbbbddcb5555bc.
 .cbbbbc..................cbbbbc..
 .................................
 `;
-            case "image2":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . e e . . . . . . . . . 
-. . . . . . . e . . . . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . f f f f f f . . . . . 
-. . . . f f 1 f f 1 f f . . . . 
-. . . . f f f 1 1 f f f . . . . 
-. . . . f f 1 f f 1 f f . . . . 
-. . . . . f f f f f f . . . . . 
-. . . . . . f f f f . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`;
             case "image3":return img`
 . . . . . . f f f f . . . . . . 
 . . . . f f f e e f f f . . . . 
@@ -109,6 +91,44 @@ f d d f f f f f f d d f
 . . 7 7 f 9 9 9 9 9 9 f 7 b . . 
 . . . . . a a a a a a . . . . . 
 . . . . . a a . . a a . . . . . 
+`;
+            case "image2":
+            case "Bomb":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . e e . . . . . . . . . 
+. . . . . . . e . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . f f f f f f . . . . . 
+. . . . f f 1 f f 1 f f . . . . 
+. . . . f f f 1 1 f f f . . . . 
+. . . . f f 1 f f 1 f f . . . . 
+. . . . . f f f f f f . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "F0rx80;oe|5SFBgVITQ4":
+            case "Dark mater":return img`
+. . . . . . f f f f . . . . . . 
+. . . . f f f a a f f f . . . . 
+. . . f f f a a c c f f f . . . 
+. . f f f c a c c c c f f f . . 
+. . f f a c c c a c c c f f . . 
+. . f c c c f f f f c c c f . . 
+. . f f f f c a a a f f f f . . 
+. f f a f c f c a f a f a f f . 
+. f a c c c f a c f a c c a f . 
+. . f c c a c a a c c c c f . . 
+. . . f c c a f f c c a f . . . 
+. . a c f c c c c c c f c c . . 
+. . c c f c c c c c c f c c . . 
+. . c c f c c c c c c f c c . . 
+. . c . . f f f f f f . . c . . 
+. . . . . f f . . f f . . . . . 
 `;
         }
         return null;
